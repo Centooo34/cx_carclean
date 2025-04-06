@@ -1,15 +1,17 @@
-local function cleanVehicle()
-    local coords = GetEntityCoords(cache.ped)
-    local includePlayerVehicle = false
-    local auto = lib.getClosestVehicle(coords, 1.5, includePlayerVehicle)
-
+local function cleanVehicle(car)
     if lib.progressBar({
             duration = 10000,
             label = 'Cleaning vehicle...', -- you can edit this
             useWhileDead = false,
             canCancel = false,
+            allowRagdoll = false,
+            allowSwimming = false,
+            allowCuffed = false,
+            allowFalling = false,
             disable = {
                 car = true,
+                move = true,
+                combat = true
             },
             anim = {
                 dict = 'amb@world_human_maid_clean@',
@@ -23,7 +25,7 @@ local function cleanVehicle()
             }
         })
     then
-        SetVehicleDirtLevel(auto, 0.0)
+        SetVehicleDirtLevel(car, 0.0)
     end
 end
 
@@ -31,7 +33,7 @@ exports.ox_target:addGlobalVehicle({
     distance = 1.5,
     icon = "fas fa-water",
     label = "Clean vehicle",
-    onSelect = function()
-        cleanVehicle()
+    onSelect = function(data)
+        cleanVehicle(data.entity)
     end
 })
