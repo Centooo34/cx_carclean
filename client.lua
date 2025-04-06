@@ -1,4 +1,4 @@
-RegisterNetEvent('cleanVehicle', function()
+local function cleanVehicle()
     local coords = GetEntityCoords(cache.ped)
     local includePlayerVehicle = false
     local auto = lib.getClosestVehicle(coords, 1.5, includePlayerVehicle)
@@ -21,15 +21,17 @@ RegisterNetEvent('cleanVehicle', function()
                 rot = vec3(0.0, 0.0, 0.0),
                 bone = 57005
             }
-        }) then
+        })
+    then
         SetVehicleDirtLevel(auto, 0.0)
     end
-end)
+end
 
 exports.ox_target:addGlobalVehicle({
-    event = "cleanVehicle",
     distance = 1.5,
     icon = "fas fa-water",
-    label = "Clean vehicle"
+    label = "Clean vehicle",
+    onSelect = function()
+        cleanVehicle()
+    end
 })
-
