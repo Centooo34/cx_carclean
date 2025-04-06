@@ -5,7 +5,7 @@ RegisterNetEvent('cleanVehicle', function()
 
     lib.progressBar({
     duration = 10000,
-    label = 'Cleaning vehicle...',
+    label = 'Cleaning vehicle...', -- you can edit this
     useWhileDead = false,
     canCancel = false,
     disable = {
