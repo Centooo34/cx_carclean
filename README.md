@@ -38,8 +38,8 @@ ensure cx_carclean
 
 This script requires the following resources to work properly:
 
-- [ox_target](https://overextended.dev/)
-- [ox_lib](https://overextended.dev/)
+- [ox_target](https://github.com/overextended/ox_lib/releases)
+- [ox_lib](https://github.com/overextended/ox_target/releases)
 - [es_extended (ESX)](https://github.com/esx-framework/es_extended)
 
 Make sure they are correctly installed and running before using the script.
