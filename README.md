@@ -7,7 +7,7 @@ A simple yet effective **vehicle cleaning script** for FiveM. Perfect for server
 ## ✨ Features
 - Fast and efficient vehicle cleaning
 - Optimized and lightweight code
-- Ready to use with **target systems** or **commands**
+- Ready to use with **target systems** 
 - Easily customizable
 - Showcase video below
 
