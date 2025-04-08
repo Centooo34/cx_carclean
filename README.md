@@ -14,7 +14,7 @@ A simple yet effective **vehicle cleaning script** for FiveM. Perfect for server
 ---
 
 ## 🧼 Showcase
-[Click here to watch]([https://streamable.com/o8w6n7]https://youtu.be/za9mC5yM-2w?si=kbdlRfVLbYGkPSNo)
+[Click here to watch](https://youtu.be/za9mC5yM-2w?si=kbdlRfVLbYGkPSNo)
 
 ---
 
