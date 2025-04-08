@@ -1,7 +1,11 @@
+ESX = exports["es_extended"]:getSharedObject()
+local Config = {}
+
 local function cleanVehicle(car)
-    if lib.progressBar({
-            duration = 10000,
-            label = 'Cleaning vehicle...', -- you can edit this
+
+        if lib.progressBar({
+            duration = Config.Duration,
+            label = Config.Label,
             useWhileDead = false,
             canCancel = false,
             allowRagdoll = false,
@@ -23,16 +27,16 @@ local function cleanVehicle(car)
                 rot = vec3(0.0, 0.0, 0.0),
                 bone = 57005
             }
-        })
-    then
-        SetVehicleDirtLevel(car, 0.0)
-    end
+        }) then
+            SetVehicleDirtLevel(car, 0.0)
+        end
 end
 
 exports.ox_target:addGlobalVehicle({
     distance = 1.5,
     icon = "fas fa-water",
-    label = "Clean vehicle",
+    label = Config.LabelTarget,
+    items = Config.RequiredItem,
     onSelect = function(data)
         cleanVehicle(data.entity)
     end
