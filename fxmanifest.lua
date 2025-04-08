@@ -7,12 +7,12 @@ description 'Car clean script'
 
 shared_scripts {
     "@es_extended/imports.lua",
-    "config.lua"
 }
 
 client_scripts {
+    "config.lua",
     '@ox_lib/init.lua',
-    'client.lua'
+    'client/client.lua'
 }
 
 
